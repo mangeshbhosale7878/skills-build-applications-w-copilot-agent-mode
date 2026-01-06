@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
-import logo from '../public/octofitapp-small.svg';
+// Use public folder reference for logo
+// import logo from '../public/octofitapp-small.svg';
 import Activities from './components/Activities';
 import Leaderboard from './components/Leaderboard';
 import Teams from './components/Teams';
@@ -14,7 +15,7 @@ function App() {
       <div className="container mt-4">
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary mb-4 rounded">
           <NavLink className="navbar-brand d-flex align-items-center" to="/">
-            <img src={logo} alt="OctoFit Logo" className="octofit-logo" />
+            <img src={process.env.PUBLIC_URL + '/octofitapp-small.svg'} alt="OctoFit Logo" className="octofit-logo" />
             OctoFit Tracker
           </NavLink>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
